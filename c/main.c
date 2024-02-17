@@ -6,9 +6,10 @@
 
 int main(void)
 {
-    test testando;
-    scanf("%d", &testando.codigoCliente);
-    printf("codigo %d", testando.codigoCliente);
-
+    test cliente;
+    
+    cadastrar(&cliente);
+    imprimir(&cliente);
+    
     return 0;
 }
