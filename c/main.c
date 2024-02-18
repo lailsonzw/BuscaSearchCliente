@@ -8,7 +8,7 @@
 
 int main(void)
 {
-    cliente cliente;
+    cliente cliente[10];
     FILE * entrada;
 
     entrada = fopen(NomeArquivo,"rt");
@@ -18,6 +18,7 @@ int main(void)
     printf("lendo dados..\n");
     sleep(1);
     printf("lendo dados...\n\n");
+    sleep(1);
 
     system("clear");
     if(entrada == NULL)
@@ -30,12 +31,15 @@ int main(void)
         printf("O arquivo foi lido com sucesso!\n\n");
     }
 
-    for(int ordem = 0; ordem < 3; ordem ++){
-        fscanf(entrada, "%s %s %d", cliente.nome, cliente.endereco, &cliente.codigoCliente);
+    for(int ordem = 0; ordem < 5; ordem ++)
+    {
+        fscanf(entrada, "%s %s %d\n", cliente[ordem].nome, cliente[ordem].endereco, &cliente[ordem].codigoCliente);
     }
     
-
-    printf("name: %s\naddress: %s\ncod client: %d\n", cliente.nome, cliente.endereco, cliente.codigoCliente);
+    for(int ordem = 0; ordem < 5; ordem ++)
+    {
+        printf("name: %s\naddress: %s\ncod client: %d\n\n", cliente[ordem].nome, cliente[ordem].endereco, cliente[ordem].codigoCliente);
+    }
 
     fclose(entrada);
     return 0;
