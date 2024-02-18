@@ -2,6 +2,6 @@
 
 #include <math.h>
 
-typedef struct cliente test;
+typedef struct cliente cliente;
 
-void cadastrar(test * usuario);
+void imprimir(cliente * usuario);
