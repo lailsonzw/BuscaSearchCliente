@@ -50,7 +50,7 @@ int main(void)
         printf("Digite o codigo do usuario que voce deseja buscar: ");
         scanf("%d",&cod);
 
-        BuscaCodigo(cliente[100],&cod,&posicao);
+        BuscaCodigo(&cliente[100],&cod,&posicao);
         cod = 0;
     }
     else

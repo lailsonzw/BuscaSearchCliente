@@ -20,18 +20,14 @@ void imprimir(struct cliente * usuario)
     printf("Codigo: %d\n",usuario->codigoCliente);
 }
 
-void BuscaCodigo(struct cliente usuario[],int * cod,int * posicao)
+void BuscaCodigo(struct cliente *usuario,int *cod, int *posicao) 
 {
-    while(usuario[*posicao].codigoCliente != *cod)
-    {
-        if(usuario[*posicao].codigoCliente < *cod)
-        {
-            posicao += 10;
-        }
-        if(usuario[*posicao].codigoCliente > *cod)
-        {
+    usuario[100];
 
-        }
+    while(usuario[*posicao].codigoCliente < *cod)
+    {
+        *posicao = *posicao + 10;
+        printf("usuario: %s\n",usuario[*posicao].nome);
     }
 }
 
