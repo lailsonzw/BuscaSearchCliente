@@ -3,25 +3,26 @@
 #include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
-#include "math.h"
+#include <math.h>
 
 #define NomeArquivo "dados.txt"
-#define Quantidade 100
+
 
 int main(void)
 {
+    
+    int Quantidade = 100;
     //variavel que irar guardar os dados do cliente;
     cliente cliente[Quantidade];
     //variavel que irar ler a lista e posteriormente passar os dados da lista para a variavel cliente;
     FILE * entrada;
-    //variavel para guardar a posição do usuario pesquisado;
-    int posicao = 0;
     //variavel para permitir o usuario fazer escolha;
     int escolha = 0;
     //variavel que irar guardar o codigo do usuario;
     int cod = 0;
     //variavel usada em estrutura de repeticao;
     int ordem = 0;
+ 
 
     entrada = fopen(NomeArquivo,"rt");
 
@@ -64,8 +65,13 @@ int main(void)
         scanf("%d",&cod);
         system("clear");
         system("cls");
-        BuscaCodigo(&cliente,&cod,&posicao);
+        jump_search(cliente,Quantidade,cod);
         cod = 0;
+    }
+    if(escolha == 2)
+    {
+        printf("Digite o nome do usuario que voce deseja buscar: ");
+        
     }
     else
     {
@@ -74,4 +80,5 @@ int main(void)
 
     fclose(entrada);
     return 0;
-}
+}   
+ 

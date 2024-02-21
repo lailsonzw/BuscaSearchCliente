@@ -8,4 +8,7 @@
     void pergunta(int * escolha);
     
     //Adicionando a função que irar buscar o usuario pelo codigo;
-    void BuscaCodigo(struct cliente * usuario,int * cod,int * posicao);
+   
+
+    //Adicionando a função que irar buscar o usuario pelo nome;
+   
